@@ -1,28 +1,48 @@
-import { useState } from 'react'
-import Header from './components/organisms/Header.jsx'
-import Input from './components/atoms/Input/Input.jsx'
-import Button from './components/atoms/Button/Button.jsx'
+import Button from './components/atoms/Button/Button';
+import Input from './components/atoms/Input/Input'; // Ваш компонент
+import Card from './components/molecules/Card/Card';
+
 function App() {
+  const handleLogin = () => {
+    alert('Логіка входу буде реалізована пізніше');
+  };
 
   return (
-    <>
-      <Header />
-      <h1>Hello</h1>
+    <div style={{ 
+      display: 'flex', 
+      justifyContent: 'center',
+      alignItems: 'center', 
+      height: '100vh', 
+      backgroundColor: '#f0f2f5' 
+    }}>
+      <Card>
+        <h2 style={{ marginBottom: '20px', textAlign: 'center' }}>
+          Ласкаво просимо
+        </h2>
 
+        <div style={{ marginBottom: '15px' }}>
+          <Input label = "Email" type="email" placeholder="Email" />
+        </div>
 
+        <div style={{ marginBottom: '20px' }}>
+          <Input label = "Password" type="password" placeholder="Пароль" />
+        </div>
 
-<Input
-        label="Email"
-        type="email"
-        placeholder="email"
-      />
-
-      <Button onClick={() => console.log("clicked")} variant="secondary">
-        Submit
-        </Button>
-
-    </>
-  )
+        <div style={{ 
+          display: 'flex', 
+          gap: '10px',
+          justifyContent: 'center' 
+        }}>
+          <Button onClick={handleLogin} variant="primary">
+            Увійти
+          </Button>
+          <Button onClick={() => console.log("clicked")} variant="secondary">
+            Реєстрація
+          </Button>
+        </div>
+      </Card>
+    </div>
+  );
 }
 
-export default App
+export default App;
