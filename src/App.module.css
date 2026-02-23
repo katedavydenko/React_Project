@@ -22,7 +22,7 @@
 }
 
 .active {
-  background-color:  rgb(139, 0, 173) !important;
+  background-color:  rgb(87, 148, 255) !important;
   color: rgb(255, 255, 255);
-  border-color: rgb(139, 0, 173);
+  border-color: rgb(87, 148, 255);
 }
