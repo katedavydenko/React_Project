@@ -63,10 +63,6 @@ function AddStudentForm({ onAddStudent }) {
     }
   };
 
-  const isFormValid =
-    formData.name.trim() !== '' &&
-    formData.score !== '' &&
-    Object.keys(errors).length === 0;
 
   return (
     <form onSubmit={handleSubmit}>
@@ -96,7 +92,6 @@ function AddStudentForm({ onAddStudent }) {
       <Button
         type="submit"
         variant="primary"
-        disabled={!isFormValid}
       >
         Додати студента
       </Button>
