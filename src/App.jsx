@@ -4,9 +4,11 @@ import StatisticsData from './StatisticsData';
 import AboutAuthor from './AboutAuthor';
 import styles from './App.module.css';
 
+
 function App() {
   const [activeTab, setActiveTab] = useState('list');
-
+  
+  
   return (
     <div className={styles.appContainer}>
       <div className={styles.filters}>
@@ -22,7 +24,7 @@ function App() {
           About Author
         </button>
       </div>
-
+      
       <div className={styles.content}>
         {activeTab === 'list' && <StudentList />}
         {activeTab === 'stats' && <StatisticsData />}
